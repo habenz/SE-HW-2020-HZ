@@ -1,0 +1,47 @@
+/*img {
+	width: 48%;
+	height: 48%;
+}*/
+
+body {
+	display: grid;
+	grid-template-areas: 
+	"header header"
+	"section section"
+	"section section"
+	"section section"
+	"form .";
+}
+
+header {
+	grid-area: header;
+}
+
+section {
+	grid-area: section;
+}
+
+#img-box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#img-box img {
+	margin: .5rem;
+
+	width: 45%;
+	height: 30%;
+}
+
+form {
+	grid-area: form;
+	display: flex;
+	flex-direction: column;
+}
+
+input[type='submit'] {
+	width: fit-content;
+	padding: .25rem;
+	margin-top: .25rem;
+}
