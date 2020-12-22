@@ -12,35 +12,36 @@
 
 	<label for="num-requests"></label>
 	<input type="text" name="num-requests" id="num-requests" 
-		maxlength="5" pattern="\d*"> <!-- not sure how to make pattern work here -->
+		maxlength="5" pattern="\d*"
+		placeholder="10"> <!-- not sure how to make pattern work here -->
 	<button id="search-button">Search</button>
 
 	<div id="borough-selectors">
-
-		<label for="select-bronx">Bronx</label>
+	<!-- input HAS to come first for the css to work -->
 		<input type="checkbox" id="select-bronx">
+		<label for="select-bronx">Bronx</label>
 
-		<label for="select-brooklyn">Brooklyn</label>
 		<input type="checkbox" id="select-brooklyn">
+		<label for="select-brooklyn">Brooklyn</label>
 
-		<label for="select-queens">Queens</label>
 		<input type="checkbox" id="select-queens">
+		<label for="select-queens">Queens</label>
 
-		<label for="select-manhattan">Manhattan</label>
 		<input type="checkbox" id="select-manhattan">
+		<label for="select-manhattan">Manhattan</label>
 
-		<label for="select-staten-island">Staten Island</label>
 		<input type="checkbox" id="select-staten-island">
+		<label for="select-staten-island">Staten Island</label>
 	</div>
 
 
-	<div id="bronx-results" class="results"></div>
-	<div id="brooklyn-results"class="results"></div>
-	<div id="queens-results"class="results"></div>
-	<div id="manhattan-results"class="results"></div>
-	<div id="staten-island-results"class="results"></div>
-
-
+	<div id="results-container">
+		<div id="bronx-results" class="results"></div>
+		<div id="brooklyn-results"class="results"></div>
+		<div id="queens-results"class="results"></div>
+		<div id="manhattan-results"class="results"></div>
+		<div id="staten-island-results"class="results"></div>
+	</div>
 
 </body>
 </html>

@@ -46,18 +46,23 @@ $(() => {
 
 	});
 
-	// makeCallForBorough("BRONX",10)
-	// 	.then(function(data) {
-	// 		displayData("#bronx-results",data);
-	// 		console.log(data);
-	// 	});
+	makeCallForBorough("BRONX",10)
+		.then(function(data) {
+			displayData("#bronx-results",data);
+			console.log(data);
+		});
 
 
 function displayData(location,data) {
-	$(location).append(`<h3>${location.slice(1)}</h3>`);
+	let headingName = location.slice(1).split("-").join(" ");
+	$(location).append(`<h3 class="borough-heading">${headingName}</h3>`);
+
 	for (const datum of data){
 		let $entry = $('<div>');
-		$entry.text(`${datum.complaint_type}: ${datum.descriptor}`);
+		$entry.addClass('entry');
+		// $entry.text(`${datum.complaint_type}: ${datum.descriptor}`);
+		$entry.append(
+			`<span class="description"> ${datum.complaint_type}: ${datum.descriptor}</span>`);
 
 		let $button = $('<button>');
 		$button.text('toggle police response');
@@ -66,6 +71,7 @@ function displayData(location,data) {
 
 		let $response = $('<div>');
 		$response.text(`${datum.resolution_description}`);
+		$response.addClass("response")
 		$response.css("display","none");
 
 		$button.on('click',()=>{
