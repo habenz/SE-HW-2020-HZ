@@ -1,0 +1,10 @@
+#tasks-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+}
+.list-wrapper {
+	width: 40vw;
+}
+.done-item {
+	text-decoration: line-through;
+}
