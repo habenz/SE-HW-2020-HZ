@@ -60,7 +60,6 @@ function displayData(location,data) {
 	for (const datum of data){
 		let $entry = $('<div>');
 		$entry.addClass('entry');
-		// $entry.text(`${datum.complaint_type}: ${datum.descriptor}`);
 		$entry.append(
 			`<span class="description"> ${datum.complaint_type}: ${datum.descriptor}</span>`);
 
