@@ -3,7 +3,7 @@ class Team {
         this.name = name;
         this.score = 0;
         //assign jquery element to each Team instance
-        // assume that $el is a div with class score-card that needs to be populated
+        // assume that $el is a div that needs to be populated
         this.$el = $el;
         this.setup();
     }
@@ -21,7 +21,25 @@ class Team {
         this.score -= pointValue;
         this.$el.children(".score").text(this.score);
     }
+
     setup(){
+        // make sure $el has score-card class
+        this.$el.addClass('score-card');
+        // add team name to display
+        const nameField = $('<span class="team-name">');
+        nameField.text(this.name);
+        this.$el.append(nameField);
+        // add score to display
+        const score = $('<h2 class="score">');
+        score.text(this.score);
+        this.$el.append(score);
+
+        // add buttons to display
+        const buttonWrapper = $('<div class="score-button-wrapper">');
+        buttonWrapper.append($('<button class="increment">').text("+"));
+        buttonWrapper.append($('<button class="decrement">').text("-"));
+        this.$el.append(buttonWrapper);
+
         this.$el.find(".increment").on('click', () => {
             //the pt value should be imported from another class
             this.increaseScore(100)
@@ -31,14 +49,13 @@ class Team {
             this.decreaseScore(100)
             
         })
-        //remember to call these methods when you instantiate the class
         return this;
     }
 
 }
 $(()=>{
     // const pointValue = 100;
-    const team1 = new Team('team1', $('#team1'));
-    const team2 = new Team('team2', $('#team2')).setup();
-    const team3 = new Team('team3', $('#team3')).setup();
+    const team1 = new Team('Team 1', $('#team1'));
+    const team2 = new Team('Team 2', $('#team2'));
+    const team3 = new Team('Team 3', $('#team3'));
 })

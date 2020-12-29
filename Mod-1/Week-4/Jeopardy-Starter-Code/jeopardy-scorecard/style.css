@@ -9,7 +9,7 @@ body {
     border-radius: .2rem;
     font-family: Helvetica sans-serif;
     font-size: 125%;
-    box-shadow: 0 0 1rem 0.2rem rgba(0,0,0,.5);
+    box-shadow: 0 0 1rem 0.1rem rgba(0,0,0,.5);
 }
 
 .team-name {
