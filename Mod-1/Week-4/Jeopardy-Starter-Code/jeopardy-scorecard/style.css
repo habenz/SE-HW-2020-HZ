@@ -1,3 +1,47 @@
-body{
-    background: aquamarine;
+body {
+	background-color: blue;
+}
+
+.score-card {
+	width: fit-content;
+	background-color: white;
+	padding: 1rem;
+    border-radius: .2rem;
+    font-family: Helvetica sans-serif;
+    font-size: 125%;
+    box-shadow: 0 0 1rem 0.2rem rgba(0,0,0,.5);
+}
+
+.team-name {
+	font-weight: 750;
+    font-size: 125%;
+    border-bottom: solid black .1rem;
+}
+
+.score {
+	text-align: center;
+    background-color: blue;
+    color: white;
+    font-weight: 800;
+    margin-block-start: .5rem;
+    margin-block-end: .5rem;
+}
+
+.score-button-wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+.increment, .decrement {
+	border: none;
+	background-color: unset;
+    font-size: 140%;
+    font-weight: 600;
+}
+
+.increment {
+	color: green;
+}
+
+.decrement {
+	color: red;
 }
