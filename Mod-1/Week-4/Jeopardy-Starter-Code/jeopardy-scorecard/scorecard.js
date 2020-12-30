@@ -1,4 +1,4 @@
-class Team {
+export class Team {
     constructor(name, $el){
         this.name = name;
         this.score = 0;
@@ -53,9 +53,9 @@ class Team {
     }
 
 }
-$(()=>{
-    // const pointValue = 100;
-    const team1 = new Team('Team 1', $('#team1'));
-    const team2 = new Team('Team 2', $('#team2'));
-    const team3 = new Team('Team 3', $('#team3'));
-})
+// $(()=>{
+//     // const pointValue = 100;
+//     const team1 = new Team('Team 1', $('#team1'));
+//     const team2 = new Team('Team 2', $('#team2'));
+//     const team3 = new Team('Team 3', $('#team3'));
+// })

@@ -7,11 +7,14 @@
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js">
     </script>
-      <script type="text/javascript" src="app.js"></script>
+      <script type="module" src="app.js"></script>
       <link rel="stylesheet" href="style.css">
+
+      <!-- <script type="text/javascript" src="../jeopardy-scorecard/scorecard.js"></script> -->
+      <link rel="stylesheet" type="text/css" href="../jeopardy-scorecard/scorecard-style.css">
 </head>
 <body>
-    
+   <!-- run: http-server -c-1  to run server-->
 <div>
     <div class="board">
       <div class="row categories">
@@ -46,6 +49,7 @@
       <div class="row clues">
         <div class="tile"> 
           <div class="question-value">$200</div>
+<!--           <div class="question">This is the question.</div>-->
           <div class="question-answer">This is the answer.</div>
         </div>
         <div class="tile">
@@ -66,72 +70,78 @@
         </div>
       </div>
       <div class="row clues">
-        <div class="tile" onclick="toggleActive(this)"> 
+        <div class="tile"> 
           <div class="question-value">$300</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$300</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$300</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$300</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$300</div>
           <div class="question-answer">This is the answer.</div>
         </div>
       </div>
       <div class="row clues">
-        <div class="tile" onclick="toggleActive(this)"> 
+        <div class="tile"> 
           <div class="question-value">$400</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$400</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$400</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$400</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$400</div>
           <div class="question-answer">This is the answer.</div>
         </div>
       </div>
       <div class="row clues">
-        <div class="tile" onclick="toggleActive(this)"> 
+        <div class="tile"> 
           <div class="question-value">$500</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$500</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$500</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$500</div>
           <div class="question-answer">This is the answer.</div>
         </div>
-        <div class="tile" onclick="toggleActive(this)">
+        <div class="tile">
           <div class="question-value">$500</div>
           <div class="question-answer">This is the answer.</div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div id="scorecards">
+    <div id="team1"></div>
+    <div id="team2"></div>
+    <div id="team3"></div>
   </div>
 </body>
 </html>

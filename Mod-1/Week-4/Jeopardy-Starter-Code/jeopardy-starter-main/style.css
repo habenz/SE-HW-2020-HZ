@@ -5,8 +5,9 @@
   .board {
     position: absolute;
     top: 0px;
-    bottom: 0px;
+    bottom: 7rem;
     width: 100%;
+    z-index: -1;
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
@@ -52,6 +53,11 @@
   .board .row .question-answer {
     display: none;
   }
+
+/*  .board .row .question {
+    display: none;
+  }*/
+
   .board .row .tile.active {
     border-width: 0;
     font-size: 10vw;
@@ -67,5 +73,13 @@
   }
   .board .row .tile.active .question-answer {
     display: block;
+  }
+
+  #scorecards {
+    position: fixed;
+    bottom: 0rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
   }
   
