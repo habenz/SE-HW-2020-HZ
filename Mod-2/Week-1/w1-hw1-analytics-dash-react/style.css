@@ -1,0 +1,84 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	background: linear-gradient(135deg, #756c8b, #393750);
+	color: white;
+}
+
+/* Get rid of pesky defaults */
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+ul {
+	list-style: none;
+	padding: unset;
+}
+
+/*Main styling*/
+#App {
+	width: 90vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-template-rows: auto;
+	grid-template-areas:
+	"sidebar reviews rating analysis"
+	"sidebar website website website"
+	"sidebar website website website";
+	column-gap: 2vw;
+	row-gap: 5vh;
+	padding: 4rem 0;
+}
+
+.main-component {
+	background-color: #333d49;
+	padding: .5rem;
+	justify-self: stretch;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 125%;
+	margin: auto;
+}
+
+.sidebar li {
+	margin-bottom: 2rem;
+}
+
+.reviews {
+	grid-area: reviews;
+}
+
+.avg-rating {
+	grid-area: rating;
+}
+
+.sentiment-analysis {
+	grid-area: analysis;
+}
+.sentiment-analysis ul{
+	text-align: center;
+}
+
+.website-visitors {
+	grid-area: website;
+}
+
+.graph {
+	position: relative;
+	top: 15%;
+}
+
+.graph img{
+	width: 65vw;
+	margin: auto;
+}
