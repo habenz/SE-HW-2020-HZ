@@ -1,0 +1,27 @@
+body {
+	font-style: Helvetica;
+}
+
+#App {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.receipt {
+	padding: .5rem;
+	border: solid orange 3px;
+}
+
+.receipt ul {
+	list-style: none;
+	padding: unset;
+}
+
+.receipt ul li {
+	margin-bottom: 1rem;
+}
+
+.title {
+	color: purple;
+	font-weight: bold;
+}
