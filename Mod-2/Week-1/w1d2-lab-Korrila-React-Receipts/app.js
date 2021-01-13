@@ -19,7 +19,7 @@ class App extends React.Component {
 		return (
 			<div id="App">
 				{this.state.receipts.map((receipt) => {
-					return (!receipt.paid ? <Receipt content={receipt} handleClick={this.handleClick} /> : null )
+					return (!receipt.paid ? <Receipt content={receipt} onClick={this.handleClick} /> : null )
 				})}
 			</div>
 			)
@@ -34,7 +34,7 @@ class Receipt extends React.Component {
 	render() {
 		const simpleOrderComponents = ["main", "protein", "rice", "sauce", "drink", "cost"];
 		return (
-			<div className="receipt" onClick={(event) => this.props.handleClick(event, this.props.content)}>
+			<div className="receipt" onClick={(event) => this.props.onClick(event, this.props.content)}>
 			{/*need to pass the receipt content through anon function, get the click handler from parent*/}
 				<h3> {this.props.content.person} </h3>
 				<ul>
@@ -53,6 +53,6 @@ class Receipt extends React.Component {
 }
 
 ReactDOM.render(
-	<App/>,
+	<App className="test"/>,
 	document.getElementById('root')
 )
