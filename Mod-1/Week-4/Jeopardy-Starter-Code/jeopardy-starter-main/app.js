@@ -14,6 +14,7 @@ $(()=>{
       for (const team of teams) {
       	// remove previous click handlers
       	team.$el.find(".score-button-wrapper").children().off();
+
       	// attach handlers with appropriate point value
       	team.$el.find(".increment").on('click', () => {
             //the pt value should be imported from another class
@@ -24,6 +25,7 @@ $(()=>{
             team.decreaseScore(currPointVal);
             
         });
+
       }
     })
 })
