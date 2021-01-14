@@ -1,0 +1,19 @@
+body {
+	background-color: dimgrey;
+	color: white;
+}
+
+.add-item-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input {
+	width: 33vw;
+	background-color: darkgrey;
+}
+
+.bought-button {
+	margin-left: 1rem;
+}
