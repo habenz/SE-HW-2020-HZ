@@ -1,4 +1,36 @@
 class App extends React.Component {
+
+	render() {
+		return (
+			<div >
+				<DivOne />
+			</div>
+			)
+	}
+}
+
+class DivOne extends React.Component {
+	render() {
+		return(
+			<div >
+				<DivTwo />
+			</div>
+			)
+	}
+}
+
+class DivTwo extends React.Component {
+	render() {
+		return(
+			<div >
+				<DivThree />
+				<DivThree />
+			</div>
+			)
+	}
+}
+
+class DivThree extends React.Component {
 	state = {
 		tardis:{
 			name: 'Time and Relative Dimension in Space',
@@ -26,39 +58,9 @@ class App extends React.Component {
 
 	render() {
 		let text = this.state.tardis.name;
-		return (
-			<div onClick={() => this.changeIt(text)}>
-				<DivOne data={text}/>
-			</div>
-			)
-	}
-}
-
-class DivOne extends React.Component {
-	render() {
 		return(
 			<div >
-				<DivTwo data={this.props.data}/>
-			</div>
-			)
-	}
-}
-
-class DivTwo extends React.Component {
-	render() {
-		return(
-			<div >
-				<DivThree data={this.props.data}/>
-			</div>
-			)
-	}
-}
-
-class DivThree extends React.Component {
-	render() {
-		return(
-			<div >
-				<h3> {this.props.data} </h3>
+				<h3 onClick={() => this.changeIt(text)}> {this.state.tardis.name} </h3>
 			</div>
 			)
 	}
