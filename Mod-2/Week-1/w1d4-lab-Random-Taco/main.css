@@ -1,0 +1,54 @@
+:root{
+  --bg: #f7fff7; /*light green*/
+  --border: #216a75; /*dark teal*/
+  --title: #4dcec5; /*lighter teal*/
+  --para-text: #216a75;/*dark teal*/
+  --para-title: #fe7877;/*pink*/
+  --para-title-val: #fee979;/*yellow*/
+  --button-bg: #5e353f; /*brown*/
+}
+
+body {
+	background-color: var(--bg);
+	border: solid var(--border) .5rem;
+/*	height: 95vh; better if I could calc so it takes up whole screen without scroll*/	
+	min-height: 90vh;
+	text-align: center;
+	font-family: 'Hi Melody', cursive;
+	font-size: 130%;
+	padding: 1rem;
+}
+
+.main-title {
+	color: var(--title);
+}
+
+/* ex: shell */
+.paragraph-type {
+	color: var(--para-title);
+}
+
+/* ex: bad-ass tortillas*/
+.paragraph-title {
+	color: var(--para-title-val);
+}
+
+p {
+	color: var(--para-text);
+	text-align: left;
+}
+
+.random-button {
+	color: var(--para-title-val);
+	background-color: var(--button-bg);
+	font-size: 150%;
+
+	position: absolute;
+	right: 10vw;
+	top: 11vh;
+	transform: rotate(25deg);
+}
+
+.random-button:hover {
+	opacity: 90%;
+}
