@@ -63,7 +63,7 @@ class App extends React.Component {
 				<LabeledData title="Points" value={this.state.points}/>
 				<LabeledData title="Clue" value={this.state.prompt}/>
 
-				<button id="reveal" onClick={this.revealAnswer}> Click to Reveal Question </button>
+				<button id="reveal" onClick={this.revealAnswer}> Click to Reveal Answer </button>
 				{this.state.isRevealed? <LabeledData title="Answer" value={this.state.answer}/>: null}
 			</div>
 			)
