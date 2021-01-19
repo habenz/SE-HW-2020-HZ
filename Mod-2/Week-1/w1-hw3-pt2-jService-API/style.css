@@ -1,0 +1,52 @@
+body {
+	background-color: #3e5f73; /*blue*/
+	text-align: center;
+}
+
+button {
+	margin: .5rem;
+	padding: .3rem;
+	border-radius: .3rem;
+	border: unset;
+}
+
+#inc {
+	background-color: #6191b5 /*blue*/
+}
+
+#dec {
+	background-color: #fe938c; /*pink*/
+}
+
+#reset {
+	background-color: #e71d37 /*red*/
+}
+
+#get-clue {
+	background-color: #ead27a /*yellow*/
+}
+
+#reveal {
+	color: white;
+	background-color: #1a2650; /*dark blue*/
+	border-radius: 0;
+	font-size: 115%;
+	padding: .3rem 3rem;
+}
+
+.title {
+	color: white;
+}
+
+.label {
+	color: #e9d17a; /*yellow*/
+}
+
+.value {
+	color: white;
+	font-size: 80%;
+}
+
+#lets-play {
+	color: #e9d17a; /*yellow*/
+}
