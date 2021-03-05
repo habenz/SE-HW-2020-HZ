@@ -1,12 +1,10 @@
-package com.SE.wk2hw3.controller;
-
-import java.util.List;
+package com.SE.wk2hw2.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.SE.wk2hw3.model.Movie;
+import com.SE.wk2hw2.model.Movie;
 
 @RestController
 public class MovieController {
@@ -21,7 +19,9 @@ public class MovieController {
 
       response = restTemplate.getForObject(url, Movie[].class);
       
-      System.out.println(response);
+      for(Movie movie: response) {
+    	  System.out.println(movie);
+      }
       
       return response;
 	}
